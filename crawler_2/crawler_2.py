@@ -1,6 +1,5 @@
 import scrapy
-from scrapy.crawler import Crawler
-import time
+from scrapy.crawler import CrawlerProcess
 
 
 class JoySpider(scrapy.Spider):
@@ -14,3 +13,7 @@ class JoySpider(scrapy.Spider):
             response.css('div.station_now_playing_container').css('span.sub_title::text').extract()]
 
 
+process = CrawlerProcess()
+process.crawl(JoySpider)
+process.start()
+process.stop()
