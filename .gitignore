@@ -32,7 +32,7 @@
 
 # IntelliJ
 /out/
-
+/data/*
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
