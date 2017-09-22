@@ -38,6 +38,14 @@ setup(
     keywords='joy, radio, crawl',
     packages=find_packages(),
 
+    install_requires=[
+        'pandas',
+        'beautifulsoup4',
+        'lxml',
+        'click',
+        'requests'
+    ],
+
     extras_require={
         'dev': ['check-manifest'],
         'test': ['coverage'],
