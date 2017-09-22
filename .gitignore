@@ -29,7 +29,7 @@
 *.iws
 
 ## Plugin-specific files:
-
+*.out
 # IntelliJ
 /out/
 *.csv
