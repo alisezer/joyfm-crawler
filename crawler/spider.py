@@ -78,10 +78,11 @@ class JoySpider(object):
             logger.error(e)
             current_song = 'ERROR'
             current_artist = 'ERROR'
-
-        songs_df.loc[songs_df.shape[1]] = [current_song, current_artist,
-                                           current_time]
-
+        data = [current_song, current_artist, current_time]
+        temp_df = pd.DataFrame(data=[data],
+                               columns=['song', 'artist', 'time'])
+        songs_df = songs_df.append(temp_df)
+        songs_df.reset_index(inplace=True, drop=True)
         self.save_df(songs_df)
         logger.info('Song information saved')
 
@@ -107,9 +108,9 @@ class JoySpider(object):
             i += 1
             if i == minutes:
                 break
-            time.sleep(60)
+            time.sleep(59)
         logger.info('Timed run complete')
 
 
 if __name__ == '__main__':
-    JoySpider().counted_run(2)
+    JoySpider().counted_run(10)
