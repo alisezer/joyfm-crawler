@@ -16,12 +16,14 @@ def manage():
 
 @click.command()
 def single():
+    """Single run - save data to csv"""
     JoySpider().single_run()
 
 
 @click.command()
 @click.option('--count', type=int, help='How many times to run')
 def counted(count):
+    """Counted run - save data to csv"""
     JoySpider().counted_run(count)
 
 
@@ -29,6 +31,7 @@ def counted(count):
 @click.option('--days', type=int, help='Days to continue running')
 @click.option('--hours', type=int, help='Hours to continue running')
 def timed(days, hours):
+    """Timed run - save data to  csv"""
     JoySpider().timed_run(days, hours)
 
 
