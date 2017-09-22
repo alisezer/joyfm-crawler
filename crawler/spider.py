@@ -28,6 +28,7 @@ class JoySpider(object):
     def single_run(self):
         self.get_song_information(verbose=True)
 
+    def create_d
 
 if __name__ == '__main__':
     JoySpider().single_run()
