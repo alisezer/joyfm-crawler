@@ -63,4 +63,7 @@ Which will give you the final CSV!
 If you would like to convert this CSV to a Spotify Playlist of yours:
 http://www.playlist-converter.net/
 
+The Playlist I created: 
+https://open.spotify.com/user/malisezer/playlist/2ZlhTr6AOgh5pZLZYyEcBy
+
 Enjoy!
