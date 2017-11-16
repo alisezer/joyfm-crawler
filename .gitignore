@@ -29,7 +29,7 @@
 *.iws
 
 ## Plugin-specific files:
-
+*.out
 # IntelliJ
 /out/
 # mpeltonen/sbt-idea plugin
@@ -139,6 +139,9 @@ celerybeat-schedule
 
 # dotenv
 .env
+
+# CSV
+*.csv
 
 # virtualenv
 venv/

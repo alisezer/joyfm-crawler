@@ -1,45 +1,48 @@
 # JOY FM CRAWLER
 
-## INTRO
-Joy FM is a radio station and has an online website where you can listen to. 
-They feature songs ideal for working or relaxing. This little project aims to create
-a small web spider to create a playlist based on the songs they play. The spider 
+## Intro
+Without a doubt Joy FM is one of the best radio stations in Turkey.This little 
+project aims to create a small web spider to create a playlist based on the songs they play. The spider 
 objective will be to ping their website every minute, and save the song data present 
 at that minute.
 
-## ENV SETUP
-```shell
-virtualenv -p python2 venv
+## Installation
+
+After cloning the repository from Github and opening the directory in your terminal:
+```sh
+virtualenv venv
 source venv/bin/activate
-pip install -r requirements
+pip install -e .
+
 ```
 
-## SPIDER CONFIGURATION
+## Running the package
 
-### Single Run
-For a single run (get me which song is playing now):
+### Single Mode:
+Runs the program once and saves data to songs.csv under the data folder
 
-```python
-from crawler.spider import JoySpider
-my_spider = JoySpider()
-my_spider.single_run()
+```sh
+joycrawler single
 ```
 
-### Counted Run
-Get me which song is playing for x many times(Lets say x is 382):
-```python
-from crawler.spider import JoySpider
-my_spider = JoySpider()
-my_spider.counted_run(count=382)
+### Counted Mode:
+Runs the program multiple times (stated with the count variable) with 60 second 
+intervals and saves data to songs.csv under the data folder
+```sh
+joycrawler counted --count 10
 ```
 
-### Time Run
-Get me which song is playing for until a specified time(Lets say 5 Days and 2 Hours):
-```python
-from crawler.spider import JoySpider
-my_spider = JoySpider()
-my_spider.timed_run(days=5, hours=0)
+### Timed Mode:
+Runs the program for a given time (stated with days and hours variables) with 
+60 second intervals and saves data to songs.csv under the data folder
+```sh
+joycrawler timed --days 10 --hours 5
 ```
+
+_This will run the pipeline for 10 days and 5 hours_
+
+### Data
+Data will be saved in a CSV under the data folder. 
 
 
 In all runs, a CSV will be generated and saved under the data folder
@@ -49,7 +52,7 @@ In all runs, a CSV will be generated and saved under the data folder
 The initial CSV will have ERROR and duplicate columns. In order to get rid of them and generate a final CSV:
 
 ```shell
-python -m data.transformation 
+joycrawler transform_data
 ```
 
 Which will give you the final CSV!
@@ -59,7 +62,5 @@ Which will give you the final CSV!
 
 If you would like to convert this CSV to a Spotify Playlist of yours:
 http://www.playlist-converter.net/
-
-
 
 Enjoy!
