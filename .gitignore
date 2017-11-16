@@ -32,7 +32,6 @@
 
 # IntelliJ
 /out/
-*.csv
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
