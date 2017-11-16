@@ -47,7 +47,7 @@ Data will be saved in a CSV under the data folder.
 
 In all runs, a CSV will be generated and saved under the data folder
 
-## DATA TRANSFORMATION  
+## Data Transformation 
 
 The initial CSV will have ERROR and duplicate columns. In order to get rid of them and generate a final CSV:
 
@@ -58,7 +58,7 @@ joycrawler transform_data
 Which will give you the final CSV!
 
 
-## FINAL
+## Final
 
 If you would like to convert this CSV to a Spotify Playlist of yours:
 http://www.playlist-converter.net/
