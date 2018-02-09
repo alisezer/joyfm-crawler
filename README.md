@@ -3,7 +3,8 @@
 ## Intro
 Without a doubt Joy FM is one of the best radio stations in Turkey. This little 
 project creates a small web spider to compose a playlist from the songs they play. 
-The spider can ping their website, and saves the song data present at that minute.
+
+The spider pings their website, and saves the song data.
 
 ## Installation
 
