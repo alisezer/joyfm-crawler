@@ -1,10 +1,9 @@
 # JOY FM CRAWLER
 
 ## Intro
-Without a doubt Joy FM is one of the best radio stations in Turkey.This little 
-project aims to create a small web spider to create a playlist based on the songs they play. The spider 
-objective will be to ping their website every minute, and save the song data present 
-at that minute.
+Without a doubt Joy FM is one of the best radio stations in Turkey. This little 
+project creates a small web spider to compose a playlist from the songs they play. 
+The spider can ping their website, and saves the song data present at that minute.
 
 ## Installation
 
@@ -12,7 +11,7 @@ After cloning the repository from Github and opening the directory in your termi
 ```sh
 virtualenv venv
 source venv/bin/activate
-pip install -e .
+pip install -p python2.7 -e .
 
 ```
 
